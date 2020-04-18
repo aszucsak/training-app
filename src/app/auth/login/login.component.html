@@ -13,6 +13,8 @@
       <mat-hint>Enter your password</mat-hint>
       <mat-error *ngIf="loginForm.get('password').hasError('required')">Enter Password</mat-error>
     </mat-form-field>
-    <button type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+    <button *ngIf="!isLoading" type="submit" mat-raised-button color="primary"
+      [disabled]="!loginForm.valid">Login</button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
   </form>
 </section>
