@@ -1,5 +1,6 @@
 <section class="signup-form">
   <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <h1>Signup</h1>
     <mat-form-field>
       <input type="email" matInput placeholder="Your email" ngModel name="email" email required #emailInput="ngModel">
       <mat-error *ngIf="emailInput.hasError('required')">Email must not be empty</mat-error>
